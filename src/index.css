@@ -1,0 +1,62 @@
+@font-face {
+  font-family: 'Vazir-Local';
+  src: url('./assets/Vazir/Vazir-FD.eot') format('eot'),
+    url('./assets/Vazir/Vazir-FD.woff') format('woff'),
+    url('./assets/Vazir/Vazir-FD.ttf') format('truetype'),
+    url('./assets/Vazir/Vazir-FD.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Vazir-Bold-Local';
+  src: url('./assets/Vazir/Vazir-Bold-FD.eot') format('eot'),
+    url('./assets/Vazir/Vazir-Bold-FD.woff') format('woff'),
+    url('./assets/Vazir/Vazir-Bold-FD.ttf') format('truetype'),
+    url('./assets/Vazir/Vazir-Bold-FD.woff2') format('woff2');
+  font-style: normal;
+}
+
+:root {
+  --white: #ffffff;
+  --gray: #a1a3a8;
+  --light-gray: #f0f0f1;
+  --very-light-gray: #d8d8d8;
+  --dark-gray: #474747;
+  --light-purple: #dfdbe5;
+  --blue-green: #07a1b4;
+  --text-color: #4a5f73;
+  --badge-color: #eceff1;
+  --badge-hover: #e0e0e0;
+  --hover-background: #fafafa;
+  --font-persian: 'Vazir-Local';
+  --font-persian-bold: 'Vazir-Bold-Local';
+  --font-english: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+    'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+}
+
+::placeholder {
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+@media only screen and (max-width: 767px) {
+  ::placeholder {
+    font-size: 0.8rem;
+  }
+}
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  position: relative;
+}
+
+.d-none {
+  display: none;
+}

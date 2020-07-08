@@ -1,0 +1,324 @@
+.container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  background-color: var(--light-purple);
+  background-image: url('./assets/topography.svg');
+}
+
+.search-bar {
+  position: relative;
+  transform: translateY(-80px);
+  width: 60%;
+}
+
+.search-bar::before {
+  content: url('./assets/search.svg');
+  width: 22px;
+  height: 22px;
+}
+
+.clear-search::before {
+  content: url('./assets/clear.svg');
+  width: 15px;
+  height: 19px;
+}
+
+.search-bar::before,
+.clear-search::before {
+  top: 50%;
+  transform: translateY(-50%);
+  position: absolute;
+  z-index: 52;
+  padding: 5px;
+}
+
+@media only screen and (max-width: 767px) {
+  .search-bar {
+    width: 90%;
+  }
+
+  .search-bar::before {
+    width: 18px;
+    height: 18px;
+  }
+
+  .clear-search::before {
+    width: 11px;
+    height: 20px;
+  }
+
+  .search-bar::before,
+  .clear-search::before {
+    padding: 3px;
+  }
+}
+
+.clear-search {
+  cursor: pointer;
+}
+
+input {
+  position: relative;
+  z-index: 51;
+  width: 100%;
+  height: 100%;
+  color: var(--dark-gray);
+  font-weight: 300;
+  font-size: 0.857rem;
+  line-height: 1.833;
+  border-radius: 5px;
+  background-color: var(--light-gray);
+  border: none;
+  padding: 14px 45px;
+  box-sizing: border-box;
+}
+
+@media only screen and (max-width: 767px) {
+  input {
+    font-size: 0.757rem;
+    line-height: 1.533;
+    padding: 15px 30px;
+  }
+}
+
+.search-bar.active input,
+input:focus {
+  border-radius: 5px 5px 0 0;
+  background-color: var(--white);
+  outline: none;
+}
+
+.search-bar.active .search-results,
+input:focus + .search-results {
+  display: block;
+}
+
+.search-results {
+  display: none;
+  max-height: 200px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: var(--white);
+  z-index: 50;
+  overflow-x: hidden;
+  overflow-y: auto;
+  border-radius: 5px;
+  box-shadow: 0 3px 12px 0 rgba(0, 0, 0, 0.2);
+  padding: 54px 12px 10px;
+}
+
+.search-results::-webkit-scrollbar {
+  display: none;
+}
+
+.search-results::before {
+  content: '';
+  position: fixed;
+  top: 43px;
+  width: calc(100% - 24px);
+  height: 1px;
+  background-color: var(--very-light-gray);
+}
+
+.search-results-list {
+  margin: 0;
+  padding: 0;
+  letter-spacing: -0.4px;
+  font-size: 0.8rem;
+  line-height: 1.833;
+  list-style: none;
+  font-weight: 500;
+}
+
+@media only screen and (max-width: 767px) {
+  .search-results::before {
+    top: 44px;
+  }
+
+  .search-results-list {
+    letter-spacing: -0.2px;
+    font-size: 0.678rem;
+    line-height: 1.533;
+    font-weight: 300;
+  }
+}
+
+.search-results-list .result-row .result-image::before {
+  content: url('./assets/search.svg');
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: 10px;
+}
+
+.search-results-list .result-row,
+.search-results-list .show-all-results {
+  margin: 0 -12px;
+}
+
+.search-results-list .result-row:hover,
+.search-results-list .show-all-results:hover {
+  background-color: var(--hover-background);
+}
+
+.search-results-list .result-row a,
+.search-results-list .show-all-results a {
+  text-decoration: none;
+  display: block;
+  padding: 10px 4px;
+  color: var(--dark-gray);
+}
+
+.search-results-list .result-row a .result-shop-info,
+.search-results-list .show-all-results a span .search-text {
+  display: inline-block;
+  color: var(--blue-green);
+}
+
+.search-results-list .search-result-default h6 {
+  font-size: 0.768rem;
+  color: var(--dark-gray);
+  margin-bottom: 15px;
+}
+
+@media only screen and (max-width: 767px) {
+  .search-results-list .search-result-default h6 {
+    font-size: 0.678rem;
+  }
+}
+
+.search-results-list .search-result-default .default-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.search-results-list .search-result-default .default-list li {
+  background-color: var(--badge-color);
+  border-radius: 13px;
+  padding: 0 11px;
+  line-height: 27px;
+  height: 26px;
+}
+
+.search-results-list .search-result-default .default-list li:hover {
+  background-color: var(--badge-hover);
+  cursor: pointer;
+  user-select: none;
+}
+
+.localization {
+  direction: rtl;
+  width: 100%;
+  position: absolute;
+  bottom: 80px;
+}
+
+.localization .button-wrapper {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 30%;
+}
+
+.localization .button-wrapper > button {
+  width: 60px;
+  height: 30px;
+  background: none;
+  outline: none;
+  border-width: 0 0 2px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: border ease-in-out 0.3s;
+  border-color: var(--light-purple);
+}
+
+.localization .button-wrapper > button:hover {
+  font-weight: 700;
+  text-shadow: -1px -1px 0 var(--light-purple), 1px -1px 0 var(--light-purple),
+    -1px 1px 0 var(--light-purple), 1px 1px 0 var(--light-purple);
+  border-color: var(--dark-gray);
+}
+
+.localization .button-wrapper > button[value='fa'] {
+  font-family: var(--font-persian);
+}
+
+.localization .button-wrapper > button[value='en'] {
+  font-family: var(--font-english);
+}
+
+.snack-bar {
+  visibility: hidden;
+  min-width: 250px;
+  border-radius: 8px;
+  background-color: var(--dark-gray);
+  color: var(--light-gray);
+  text-align: center;
+  border-radius: 2px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1;
+  bottom: 165px;
+  font-size: 0.8rem;
+}
+
+.snack-bar.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+  to {
+    bottom: 165px;
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+  to {
+    bottom: 165px;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeout {
+  from {
+    bottom: 165px;
+    opacity: 1;
+  }
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
+}
+
+@keyframes fadeout {
+  from {
+    bottom: 165px;
+    opacity: 1;
+  }
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
+}

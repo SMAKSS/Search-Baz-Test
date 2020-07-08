@@ -1,0 +1,62 @@
+::placeholder {
+  font-family: var(--font-persian);
+}
+
+html[lang='fa'] body {
+  font-family: var(--font-persian);
+}
+
+.fa .container {
+  direction: rtl;
+}
+
+.fa .search-bar::before {
+  right: 4px;
+  left: unset;
+}
+
+.fa .clear-search::before {
+  left: 10px;
+  right: unset;
+}
+
+.fa .search-results::before {
+  right: 12px;
+  left: unset;
+}
+
+.fa .search-results-list > .result-row {
+  padding-right: 40px;
+  padding-left: unset;
+}
+
+@media only screen and (max-width: 767px) {
+  .fa .search-results-list > .result-row {
+    padding-right: 30px;
+    padding-left: unset;
+  }
+}
+
+.fa .search-results-list > .result-row .result-image::before {
+  right: 10px;
+  left: unset;
+}
+
+.fa .search-results-list > .show-all-results {
+  padding-right: 12px;
+  padding-left: unset;
+}
+
+.fa .search-results-list > .result-row a .result-title {
+  margin-left: 5px;
+  margin-right: unset;
+}
+
+.fa
+  .search-results-list
+  > .search-result-default
+  .default-list
+  li:not(:last-child) {
+  margin-left: 15px;
+  margin-right: unset;
+}
