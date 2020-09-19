@@ -1,8 +1,15 @@
 # Search project
 
-We just implement an pretty simple project based on bazlia APIs which have to trigger the search after `300ms`.
+I just implement a pretty simple project based on [Bazlia](https://bazlia.com/) APIs which have to trigger the search after `300ms`.
 
-This project stands as SPA with some cool feature like localization.
+This project stands as a SPA with some cool features like localization, but it's just a search bar which shows the related results in place.
+
+## Here are some screenshots
+
+<img src="public/screenshots/searchBar.jpg" width="150"/> 
+<img src="public/screenshots/search.jpg" width="150"/>  <img src="public/screenshots/searchBarPersian.jpg" width="150"/> <img src="public/screenshots/searchPersian.jpg" width="150"/>
+
+----
 
 ## Available Scripts
 
