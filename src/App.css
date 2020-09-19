@@ -1,5 +1,12 @@
+.fa,
+.en {
+  width: 100%;
+  height: 100%;
+}
+
 .container {
-  height: 100vh;
+  min-height: 700px;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;

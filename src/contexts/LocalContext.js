@@ -1,11 +1,8 @@
-import { createContext } from "react"
+import { createContext } from 'react';
 
 /**
  * This function is a context for localization purposes.
  */
-const LocalContext = createContext([
-    { local: "fa" },
-    obj => obj
-])
+const LocalContext = createContext([{ local: 'en' }, (obj) => obj]);
 
-export default LocalContext
+export default LocalContext;

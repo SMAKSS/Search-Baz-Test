@@ -2,7 +2,9 @@
   font-family: var(--font-english);
 }
 
-html[lang='en'] body {
+html[lang='en'] body,
+html[lang='en'] input,
+html[lang='en'] button {
   font-family: var(--font-english);
 }
 

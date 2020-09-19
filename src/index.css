@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Google+Sans:400,500,600,700');
+
 @font-face {
   font-family: 'Vazir-Local';
   src: url('./assets/Vazir/Vazir-FD.eot') format('eot'),
@@ -31,12 +33,13 @@
   --hover-background: #fafafa;
   --font-persian: 'Vazir-Local';
   --font-persian-bold: 'Vazir-Bold-Local';
-  --font-english: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
-    'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  --font-english: Google Sans, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
+    'Helvetica Neue', sans-serif;
 }
 
 ::placeholder {
+  font-family: ;
   font-size: 0.9rem;
   font-weight: 400;
 }

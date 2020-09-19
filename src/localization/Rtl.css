@@ -2,7 +2,9 @@
   font-family: var(--font-persian);
 }
 
-html[lang='fa'] body {
+html[lang='fa'] body,
+html[lang='fa'] input,
+html[lang='fa'] button {
   font-family: var(--font-persian);
 }
 
